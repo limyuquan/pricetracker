@@ -1,0 +1,27 @@
+<table class="table table-borderless">
+    <thead>
+        <tr class="table-active">
+            <th scope="col">Search</th>
+            <th scope="col">Platform</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Location</th>
+            <th scope="col">url</th>
+            <th scope="col">date time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+            <tr class="table-info">
+                <td>{{row["search"]}}</td>
+                <td>{{row["platform"]}}</td>
+                <td>{{row["name"]}}</td>
+                <td>{{row["price"]}}</td>
+                <td>{{row["location"]}}</td>
+                <td>{{row["url"]}}</td>
+                <td>{{row["datetime"]}}</td>
+            </tr>
+        {% endfor %}
+
+    </tbody>
+</table>

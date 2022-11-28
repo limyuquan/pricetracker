@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    wishlist
+{% endblock %}
+
+{% block main %}
+    <form action="/wishlist" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="product" name="product" placeholder="Enter Product Name" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Enter item</button>
+    </form>
+{% endblock %}

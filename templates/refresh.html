@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    wishlist
+{% endblock %}
+
+{% block main %}
+    <form action="/refresh" method="post">
+        <button class="btn btn-primary" type="submit">Refresh</button>
+    </form>
+{% endblock %}

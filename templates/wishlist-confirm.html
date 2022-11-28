@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    confirmation
+{% endblock %}
+
+{% block main %}
+    <form action="/wishlist" method="post" class="wishlist">
+        <div class="row">
+
+            <div class="wishlist-col">
+                <h3>Results for Shopee</h3>
+                {% for row in shopee_response %}
+
+                <input type="radio" id={{row['url']}} name="{{row['url']}}" value={{row['url']}}>
+
+                <h5>Name = {{row['name']}}</h5>
+                <h5>Price = {{row['price']}}</h5>
+                <h5>Location = {{row['location']}}</h5>
+                <h5><a href="{{row['url']}}">Url</a></h5>
+
+
+                {% endfor %}
+
+            </div>
+
+            <div class="wishlist-col">
+                <h3>Results for Lazada</h3>
+                {% for row in lazada_response %}
+
+                <input type="radio" id={{row['url']}} name="{{row['url']}}" value={{row['url']}}>
+                <h5>Name = {{row['name']}}</h5>
+                <h5>Price = {{row['price']}}</h5>
+                <h5>Location = {{row['location']}}</h5>
+                <h5><a href="{{row['url']}}">Url</a></h5>
+
+
+                {% endfor %}
+
+            </div>
+            <div class="wishlist-col">
+                <h3>Results for Amazon</h3>
+                {% for row in amazon_response %}
+
+                <input type="radio" id={{row['url']}} name="{{row['url']}}" value="a">
+                <h5>Name = {{row['name']}}</h5>
+                <h5>Price = {{row['price']}}</h5>
+                <h5><a href="{{row['url']}}">Url</a></h5>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <button class="btn btn-primary" type="submit">Confirm</button>
+        <input type="hidden" name="submit-confirm" value="200">
+        <input type="hidden" name="search" value="{{search}}">
+        <input type="hidden" name="shopee_response" value="{{shopee_response}}">
+        <input type="hidden" name="lazada_response" value="{{lazada_response}}">
+        <input type="hidden" name="amazon_response" value="{{amazon_response}}">
+    </form>
+
+
+
+{% endblock %}

@@ -1,0 +1,8 @@
+cs50
+Flask
+Flask-Session
+requests
+json
+beautifulsoup4
+selenium
+retry

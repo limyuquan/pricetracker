@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    wishlist
+{% endblock %}
+
+{% block main %}
+    <section class="homepage">
+            {% for row in rows %}
+                <div class="row">
+                    {% for items in row %}
+                        <div class="item-col title-background">
+                            <h5>Search:</h5>
+                            <h2>{{items[0]["search"]}}</h2>
+                        </div>
+                        
+                                {% for item in items %}
+                                <div class="item-col grey-background">
+                                    <h3 class="info">{{item["platform"]}}</h3>
+                                    <h5 class="info">{{item["name"]}}</h5>
+                                    <p class="info">Price: ${{item["price"]}}</p>
+                                    <p class="info">Shipped From: {{item["location"]}}</p>
+                                    <p class="info">Last Updated: {{item["datetime"]}}</p>
+                                    <a href="{{item["url"]}}" class="hero-btn red-btn">LINK</a>
+                                </div>
+                                {% endfor %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+    </section>
+
+{% endblock %}

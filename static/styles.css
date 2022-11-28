@@ -1,0 +1,98 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: x-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.wishlist{
+    width:80%;
+    margin:auto;
+    padding-top:80px;
+
+}
+.wishlist-col{
+    flex-basis: 31%;
+    padding: 20px;
+    background-color: lightgrey;
+    margin-bottom: 100px;
+
+}
+.homepage{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.wishlist-col h5{
+    font-size:10px;
+}
+.item-col{
+    flex-basis: 22%;
+    padding:30px 2px;
+    border-radius: 10%;
+    text-align: auto;
+}
+
+.title-background{
+    background-color: whitesmoke;
+    padding-top:100px;
+}
+
+.grey-background{
+    background-color: lightgrey;
+}
+
+.hero-btn{
+    display: in-line-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding:12px 14px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.red-btn{
+    border: 1px solid red;
+    background: transparent;
+    color: red;
+}
+
+.red-btn:hover{
+    color: white;
+}
